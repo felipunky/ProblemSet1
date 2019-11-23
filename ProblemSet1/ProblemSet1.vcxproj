@@ -11,10 +11,24 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <CudaCompile Include="kernel.cu" />
+    <None Include="cinque_terre.gold" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\Problem Set 1\Problem Set 1\cinque_terre_small.jpg" />
+    <Image Include="cinque_terre_small.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="compare.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="reference_calc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="compare.h" />
+    <ClInclude Include="reference_calc.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="student_func.cu" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{147C8B6A-CE00-4875-8342-0A26E3133267}</ProjectGuid>
@@ -78,6 +92,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
